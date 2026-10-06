@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dr. Ricardo Paladino</title>
+<link rel="icon" type="image/png" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* BASE */
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #f4efe8;
+  color: #2f2a26;
+  line-height: 1.8;
+}
+
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.logo img {
+  height: 125px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  text-align: center;
+  padding: 18px 0;
+  z-index: 1000;
+  background: rgba(245,240,233,0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(183,145,88,0.25);
+}
+
+nav a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: #2f2a26;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #b58a52;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 140px 20px 100px;
+  background:
+    linear-gradient(rgba(244,239,232,0.82), rgba(244,239,232,0.88)),
+    url('');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #2f2a26;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 82px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.hero p {
+  font-size: 22px;
+  margin: 20px auto 40px;
+  opacity: 0.9;
+  max-width: 700px;
+  color: #5f5246;
+}
+
+/* BUTTON */
+.btn {
+  background: #111319;
+  border: 1px solid #b58a52;
+  padding: 16px 38px;
+  color: #f8f3ec;
+  text-decoration: none;
+  transition: 0.35s;
+  border-radius: 50px;
+  display: inline-block;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.btn:hover {
+  background: #b58a52;
+  border-color: #b58a52;
+  transform: translateY(-2px);
+}
+
+/* SECTION */
+section {
+  padding: 120px 24px;
+}
+
+h2 {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 54px;
+  margin-bottom: 25px;
+  color: #1e1a17;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* CHI SONO */
+.about {
+  max-width: 1000px;
+  margin: auto;
+  background: rgba(255,255,255,0.7);
+  padding: 60px;
+  border-radius: 28px;
+  border: 1px solid rgba(181,138,82,0.18);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+
+.about p {
+  font-size: 18px;
+  margin-bottom: 28px;
+  color: #53483e;
+}
+
+/* FORMAZIONE */
+.education {
+  background: linear-gradient(to bottom, #f8f4ef, #efe6da);
+}
+
+.education p {
+  max-width: 950px;
+  margin: 0 auto 35px;
+  background: rgba(255,255,255,0.92);
+  padding: 45px;
+  border-radius: 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  text-align: left;
+  border: 1px solid rgba(181,138,82,0.15);
+}
+
+.section-intro {
+  max-width: 760px;
+  margin: 0 auto 70px;
+  text-align: center;
+  font-size: 20px;
+  color: #6a5d51;
+  line-height: 1.9;
+}
+
+.service-title {
+  display: block;
+  font-size: 30px;
+  color: #111319;
+  margin-bottom: 20px;
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 500;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: #b58a52;
+}
+
+.gold-divider {
+  width: 80px;
+  height: 2px;
+  background: #b58a52;
+  margin: 30px auto;
+}
+
+.cta {
+  background: #111319;
+  color: #f8f3ec;
+  text-align: center;
+}
+
+.cta h2 {
+  color: #d7b17a;
+}
+
+.cta p {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 20px;
+  color: #d7b17a;
+}
+
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  background: #0d0f14;
+  color: white;
+  border-top: 1px solid rgba(181,138,82,0.25);
+}
+
+footer a {
+  color: #d7b17a;
+  margin: 0 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 14px 10px;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 13px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .about {
+    padding: 35px;
+  }
+
+  .education p {
+    padding: 30px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  .logo img {
+    height: 110px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-container">
+
+    <a href="#" class="logo">
+      <img src="paladino_logo.jpeg" alt="Olga Paladino Logo">
+    </a>
+
+    <div class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Contato</a>
+      <a href="blog.html">Blog</a>
+    </div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>Doutora Olga Paladino</h1>
+    <div class="gold-divider"></div>
+    <p>Especialista em cidadania europeia, imigração e direito internacional.</p>
+    <a href="#contato" class="btn">Entrar em contato</a>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <h2>Sobre a Doutora Olga Paladino</h2>
+  <div class="gold-divider"></div>
+  <p class="section-intro">Atuação jurídica internacional com acompanhamento personalizado em processos de cidadania, imigração e regularização documental na Europa.</p>
+  <div class="about">
+    <p>A Doutora Olga Paladino é advogada com atuação internacional nas áreas de cidadania europeia, imigração e direito internacional.</p>
+    
+    <p>É inscrita na Ordem dos Advogados de Roma, na Ordem dos Advogados de Lisboa, na Ordem dos Advogados do Brasil e na Ordem dos Advogados da Europa, possuindo sólida experiência jurídica em processos internacionais e atuação voltada ao reconhecimento de direitos perante autoridades europeias.</p>
+
+    <p>Possui especialização em Direito Internacional das Imigrações pela Pontifícia Universidade Católica de Minas Gerais (PUC Minas), com formação direcionada às demandas migratórias, cidadania europeia e mobilidade internacional.</p>
+
+    <p>Também é membro do Instituto Brasileiro de Direito Estrangeiro e Comparado e da ABRINTER — Associação Brasileira de Relações Internacionais, mantendo constante atualização acadêmica e profissional nas áreas de direito internacional, imigração e cidadania.</p>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Entre em contato conosco</h2>
+  <div class="gold-divider"></div>
+  <p>Assim você receberá uma análise personalizada do seu caso e orientação jurídica especializada.</p>
+  <a href="mailto:contato@olgapaladino.com" class="btn">Enviar e-mail</a>
+</section>
+
+<!-- FOOTER -->
+<footer id="contato">
+  <p>© 2026 Doutora Olga Paladino</p>
+  <a href="#">LinkedIn</a>
+  <a href="mailto:contato@olgapaladino.com">Email</a>
+</footer>
+
+</body>
+</html>
