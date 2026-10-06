@@ -46,13 +46,14 @@ body {
 }
 /* NAV */
 nav {
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
   text-align: center;
-  padding: 18px 0;
+  padding: 10px 0;
   z-index: 1000;
-  background: rgba(245,240,233,0.92);
+
+  background: rgba(245,240,233,0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(183,145,88,0.25);
 }
@@ -73,8 +74,10 @@ nav a:hover {
 
 /* HERO */
 .hero {
-  min-height: 100vh;
-  padding: 140px 20px 100px;
+  min-height: calc(100vh - 150px);
+  box-sizing: border-box;
+
+  padding: 80px 20px;
 
   background:
     linear-gradient(
@@ -94,7 +97,6 @@ nav a:hover {
 
   color: #2f2a26;
   position: relative;
-  box-sizing: border-box;
 }
 
 .hero h1 {
